@@ -1,4 +1,5 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class EmployeeApplication {
 
@@ -16,25 +17,18 @@ public class EmployeeApplication {
         List<Employee> employee = new ArrayList<>();
         employee.add(emp1);
         employee.add(emp2);
-//        employee.add(manager);
+        employee.add(manager);
 
-//        List<Employee> employee = new ArrayList<>();
-        Set<Employee> employeeSet = new TreeSet<>(new EmployeeNameComparator());
-        employeeSet.add(emp1);
-        employeeSet.add(emp2);
-        Collections.sort(employee,new EmployeeNameComparator());
-        System.out.println(employee);
-//
-//        for (Employee item : employee) {
-//            item.introduction();
-//        }
-//
-//        manager.addEmployee(emp1);
-//        manager.addEmployee(emp2);
-//
-//        for (Employee value : employee) {
-//            System.out.println(value);
-//        }
+        for (Employee item : employee) {
+            item.introduction();
+        }
+
+        manager.addEmployee(emp1);
+        manager.addEmployee(emp2);
+
+        for (Employee value : employee) {
+            System.out.println(value);
+        }
 
         //see the output, the age is not incremented past 65
 //        for(int i=0; i<70; i++ ){
